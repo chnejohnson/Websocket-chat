@@ -1,6 +1,8 @@
-## Websocket-chat
+## Websockets-chat
 
 This is a quick websocket practice as a simple chat room with Vue and Bulma.
+
+The contents is not original, I'm enlightened by [The Net Ninja's tutorial - WebSockets](https://www.youtube.com/watch?v=vQjiN8Qgs3c&list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9).
 
 ## Get Started
 
