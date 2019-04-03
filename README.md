@@ -8,7 +8,7 @@ The contents is not original, I'm enlightened by [The Net Ninja's tutorial - Web
 
 At first, you should have node.js in your machine, and...
 
-run `yarn install` to install dependencies in the project, such as express, nodemon, and socket.io.
+run `npm install` (or `yarn install` if you have yarn) to install dependencies in the project, such as express, nodemon, and socket.io.
 
 Finally, run `nodemon index.js`, then you can open your browser on localhost:4000 to see the demo and chat with yourself.
 
