@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Web Socket</title>
+  </head>
+  <body class="has-background-dark">
+    <div id="app">
+      <p class="has-text-centered title has-text-light">Hello Socket</p>
+
+      <div class="box has-text-centered has-background-grey-lighter">
+        <p class="has-text-centered subtitle">Enter your name</p>
+        <input
+          type="text"
+          class="input"
+          v-model="name"
+          style="max-width:200px;"
+        />
+        <div style="margin-top:10px">
+          <input
+            v-model="msg"
+            type="text"
+            class="input"
+            style="max-width:500px;"
+            @keyup.enter="sendMsg"
+          />
+          <button class="button" @click="sendMsg" type="submit">Send</button>
+        </div>
+      </div>
+      <div class="box has-background-grey-lighter">
+        <div
+          class="card"
+          v-for="(message,key) in messages.slice().reverse()"
+          :key="key"
+        >
+          <div class="card-content">
+            <p class="title is-5">
+              {{ message.name }}
+              <span class="subtitle is-6">{{ message.msg }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
